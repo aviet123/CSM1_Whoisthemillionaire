@@ -1,0 +1,130 @@
+body {
+    margin: 50px;
+    text-align: center;
+    background-color: white;
+}
+h1 {
+    text-align: center;
+    color: red;
+}
+#number-question {
+    background-color: #ffffff;
+    color: green;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    line-height: 30px;
+    margin-right: 10px;
+    padding: 5px 10px;
+}
+#question {
+    margin-bottom:20px;
+    color: #FFFFFF;
+    border-radius: 4em 0 4em 0;
+    -moz-border-radius: 4em 0 4em 0;
+    -webkit-border-radius: 4em 0 4em 0;
+    border: 0 solid #000000;
+    line-height: 100px;
+    height:100px;
+    width:100%;
+    text-align: center;
+    font-weight: bold;
+    background-color:green;
+    text-transform: capitalize;
+}
+#each-question {
+    max-width:800px;
+    margin: 0 auto;
+}
+.box {
+    background-color : #3498db;
+    color: white;
+    border-radius: 2em 2em;
+    line-height: 50px;
+    height:50px;
+    width:100%;
+    font-weight:bold;
+}
+td {
+    padding: 2px 2px;
+    width: 400px;
+}
+
+.box:hover {
+    background-color: #2980b9;
+}
+img{
+    width: 500px;
+    margin-left: -20px;
+}
+#point{
+    float: left;
+    width: 60px;
+    height: 30px;
+    background-color: #3498db;
+}
+button{
+    border-radius: 5px;
+    background-color : orange;
+    color: white;
+    height:40px;
+    width:100px;
+    font-weight:bold;
+    text-align: center;
+    margin-top: 50px;
+}
+#stop-game{
+    float: right;
+
+}
+#play-again{
+    float: right;
+    margin-right: 20px;
+}
+.char{
+    float: left;
+    color: #3498db;
+    font-size: 30px;
+    line-height: 45px;
+    margin-left: 2px;
+    margin-top: 2px;
+    background-color:#FFFFFF;
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+}
+#make-sure{
+    float: left;
+}
+#rewarding{
+    float: right;
+    height: 500px;
+    width: 200px;
+    overflow: auto;
+}
+#container{
+    position: absolute;
+    width: 800px;
+    height: 100%;
+    margin-left: 100px;
+
+}
+#table{
+    height: 499px;
+}
+.step-reward{
+    background-color: #3498db;
+    color: white;
+}
+.step-reward1{
+    height: 35px;
+    line-height: 30px;
+}
+.char1{
+    float: left;
+    color: white;
+    font-size: 20px;
+    line-height: 30px;
+    margin-left: 2px;
+    margin-top: 2px;
+}

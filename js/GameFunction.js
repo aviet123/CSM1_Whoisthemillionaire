@@ -20,7 +20,8 @@ function coutinueGame() {
 }
 function WinTheGame() {
     if (game.currentPoint === 1000000){
-        game.getElement('alert').innerHTML = ' CHÚC MỪNG BẠN ĐÃ TRỞ THÀNH TRIỆU PHÚ ';
+        wingame.play();
+        game.getElement('alert').innerHTML = ' CHÚC MỪNG BẠN ĐÃ TRỞ THÀNH TRIỆU PHÚ !!!!!!!';
     }
 
 }
@@ -35,7 +36,12 @@ function Help5050(){
 function answer1() {
     //if (game.makeSure()) {
         if (game.getElement('box1').innerHTML === game.getCorrect()) {
-            right.play()
+            if (game.level < 10){
+                right.play();
+            }
+            if (game.level < 12 && game.level >9){
+                right10.play();
+            }
             game.getElement('box1').style.backgroundColor = 'yellow';
             game.getElement('point').innerHTML = game.getPoint();
             document.getElementById('left').style.display = 'block'
@@ -43,7 +49,6 @@ function answer1() {
             game.changeColorStep();
         } else {
             game.getWrongAnswer();
-
         }
 }
 
@@ -51,7 +56,12 @@ function answer1() {
 function answer2() {
     //if (game.makeSure()) {
         if (game.getElement('box2').innerHTML === game.getCorrect()) {
-            right.play();
+            if (game.level < 10) {
+                right.play();
+            }
+            if (game.level < 12 && game.level >9){
+                right10.play();
+            }
             game.getElement('box2').style.backgroundColor = 'yellow';
             game.getElement('point').innerHTML = game.getPoint();
             document.getElementById('left').style.display = 'block'
@@ -59,14 +69,18 @@ function answer2() {
             game.changeColorStep();
         } else {
             game.getWrongAnswer();
-
         }
     }
 //}
 function answer3() {
    // if (game.makeSure()) {
         if (game.getElement('box3').innerHTML === game.getCorrect()) {
-            right.play();
+            if (game.level < 10){
+                right.play();
+            }
+            if (game.level < 12 && game.level >9){
+                right10.play();
+            }
             game.getElement('box3').style.backgroundColor = 'yellow';
             document.getElementById('point').innerHTML = game.getPoint();
             document.getElementById('left').style.display = 'block'
@@ -81,7 +95,12 @@ function answer3() {
 function answer4() {
    // if (game.makeSure()) {
         if (game.getElement('box4').innerHTML === game.getCorrect()) {
-            right.play();
+            if (game.level < 10) {
+                right.play();
+            }
+            if (game.level < 12 && game.level >9){
+                right10.play();
+            }
             game.getElement('box4').style.backgroundColor = 'yellow';
             document.getElementById('point').innerHTML = game.getPoint();
             document.getElementById('left').style.display = 'block'

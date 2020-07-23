@@ -31,6 +31,7 @@ let Game = function () {
     //     debugger
     // }
     this.showQuestion = function () {
+        wait.play();
          this.getElement('question').innerHTML = this.getQuestion();
          this.getElement('box1').innerHTML =  this.getAnswer(0);
          this.getElement('box2').innerHTML =  this.getAnswer(1);

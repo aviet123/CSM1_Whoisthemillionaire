@@ -71,9 +71,11 @@ let Game = function () {
         if (game.level > 5){
             wrong611.play();
             game.currentPoint = 1000;
-        }
+            game.getElement('point').innerHTML = game.currentPoint;
+        }else
         if (game.level > 10){
             game.currentPoint = 100000;
+            game.getElement('point').innerHTML = game.currentPoint;
         }
 
     }

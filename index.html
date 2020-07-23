@@ -6,123 +6,146 @@
     <link rel="stylesheet" href="css.css">
 </head>
 <body>
+<div onload=""></div>
 <div id="point"></div>
 <div id="container">
-<img src="image/image.jpg" alt="">
-<h1>Ai Là Triệu Phú</h1>
+    <img src="image/image.jpg" alt="">
+    <h1>Ai Là Triệu Phú</h1>
 
-<div id="each-question" class="row">
-    <table>
-        <thead>
-        <tr>
-            <div id="question"> <span id="number-question"></span>
+    <div id="each-question" class="row">
+        <table>
+            <thead>
+            <tr>
+                <div id="question"><span id="number-question"></span>
+                </div>
+            <tr>
+            </thead>
+            <tbody id="sellector">
+            <tr>
+                <td>
+                    <span class="char">A</span>
+                    <div id="box1" class="box" onclick="answer1()">
+                    </div>
+                </td>
+                <td>
+                    <span class="char">B</span>
+                    <div id="box2" class="box" onclick="answer2()">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="char">C</span>
+                    <div id="box3" class="box" onclick="answer3()">
+                    </div>
+                </td>
+                <td>
+                    <span class="char">D</span>
+                    <div id="box4" class="box" onclick="answer4()">
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="notice">
+            <div class="alert" id="alert"></div>
+        </div>
+        <div id="btn-function">
+            <div id="make-sure">
+                <button type="button" onclick="Help5050()">Trợ giúp 50/50</button>
             </div>
-        <tr>
-        </thead>
-        <tbody id="sellector">
-        <tr>
-            <td>
-                <span class="char">A</span>
-                <div id="boxA" class="box" onclick="answer1()">
-                </div>
-            </td>
-            <td>
-                <span class="char">B</span>
-                <div id="boxB" class="box" onclick="answer2()">
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <span class="char">C</span>
-                <div id="boxC" class="box" onclick="answer3()">
-                </div>
-            </td>
-            <td>
-                <span class="char">D</span>
-                <div id="boxD" class="box" onclick="answer4()">
-                </div>
-            </td>
-        </tr>
-        </tbody>
-    </table>
-    <div class="notice">
-        <div class="alert" id="alert"></div>
+
+            <div id="play-again">
+                <button type="button" onclick="PlayAgain()">Chơi lại</button>
+            </div>
+            <div id="stop-game">
+                <button type="button" onclick="StopTheGame()">Dừng cuộc chơi</button>
+            </div>
+            <div id="left">
+                <button type="button" onclick="coutinueGame()">Câu tiếp theo</button>
+            </div>
+        </div>
     </div>
-    <div id="btnfunction">
-     <div id="make-sure"><button type="button" onclick="MakeSure()">Tôi chắc chắn</button></div>
-<!--        <div id="continue-game"><button type="button" onclick="coutinueGame()">Câu tiếp theo</button></div>-->
-        <div id="play-again"><button type="button" onclick="PlayAgain()">Chơi lại</button></div>
-        <div id="stop-game"><button type="button" onclick="StopTheGame()">Dừng cuộc chơi</button></div>
-    </div>
-</div>
 </div>
 <div id="rewarding">
     <table border="0" id="table">
         <tr>
             <td class="step-reward">
                 <span class="char1">1.</span>
-                <div class="step-reward1" id="step0"></div></td>
+                <div class="step-reward1" id="step0"></div>
+            </td>
         </tr>
         <tr>
             <td class="step-reward">
                 <span class="char1">2.</span>
-                <div class="step-reward1" id="step1"></div></td>
+                <div class="step-reward1" id="step1"></div>
+            </td>
         </tr>
         <tr>
             <td class="step-reward">
                 <span class="char1">3.</span>
-                <div class="step-reward1" id="step2"></div></td>
+                <div class="step-reward1" id="step2"></div>
+            </td>
         </tr>
         <tr>
             <td class="step-reward">
                 <span class="char1">4.</span>
-                <div class="step-reward1" id="step3"></div></td>
+                <div class="step-reward1" id="step3"></div>
+            </td>
         </tr>
         <tr>
             <td class="step-reward">
                 <span class="char1">5.</span>
-                <div class="step-reward1" id="step4"></div></td>
+                <div class="step-reward1" id="step4"></div>
+            </td>
         </tr>
         <tr>
             <td class="step-reward">
                 <span class="char1">6.</span>
-                <div class="step-reward1" id="step5"></div></td>
+                <div class="step-reward1" id="step5"></div>
+            </td>
         </tr>
         <tr>
             <td class="step-reward">
                 <span class="char1">7.</span>
-                <div class="step-reward1" id="step6"></div></td>
+                <div class="step-reward1" id="step6"></div>
+            </td>
         </tr>
         <tr>
             <td class="step-reward">
                 <span class="char1">8.</span>
-                <div class="step-reward1" id="step7"></div></td>
+                <div class="step-reward1" id="step7"></div>
+            </td>
         </tr>
         <tr>
             <td class="step-reward">
                 <span class="char1">9.</span>
-                <div class="step-reward1" id="step8"></div></td>
+                <div class="step-reward1" id="step8"></div>
+            </td>
         </tr>
         <tr>
             <td class="step-reward">
                 <span class="char1">10.</span>
-                <div class="step-reward1" id="step9"></div></td>
+                <div class="step-reward1" id="step9"></div>
+            </td>
         </tr>
         <tr>
             <td class="step-reward">
                 <span class="char1">11.</span>
-                <div class="step-reward1" id="step10"></div></td>
+                <div class="step-reward1" id="step10"></div>
+            </td>
         </tr>
         <tr>
             <td class="step-reward">
                 <span class="char1">12.</span>
-                <div class="step-reward1" id="step11"></div></td>
+                <div class="step-reward1" id="step11"></div>
+            </td>
         </tr>
         <tr>
             <td class="step-reward">
                 <span class="char1">13.</span>
-                <div class="step-reward1" id="step12"></div></td>
+                <div class="step-reward1" id="step12"></div>
+            </td>
         </tr>
     </table>
 </div>
@@ -134,6 +157,9 @@
 </audio>
 <audio id="wrong611">
     <source src="sound/sai611.ogg" type="audio/mp3">
+</audio>
+<audio id="helpgame">
+    <source src="sound/help.ogg" type="audio/ogg">
 </audio>
 </body>
 

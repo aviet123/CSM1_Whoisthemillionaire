@@ -6,7 +6,16 @@ function PlayAgain() {
 function StopTheGame() {
     game.getElement('alert').innerHTML = 'Bạn sẽ ra về với ' + game.currentPoint + '$';
     game.isOver = true;
+    game.getElement('play-again').style.display = 'block';
     return game.isOver;
+}
+function coutinueGame() {
+    game.switchQuestion();
+    game.getElement('box1').style.backgroundColor = '#3498db';
+    game.getElement('box2').style.backgroundColor = '#3498db';
+    game.getElement('box3').style.backgroundColor = '#3498db';
+    game.getElement('box4').style.backgroundColor = '#3498db';
+    document.getElementById('left').style.display = 'none'
 
 }
 function WinTheGame() {
@@ -15,68 +24,55 @@ function WinTheGame() {
     }
 
 }
+function Help5050(){
+    helpsound.play();
+    if (game.count === 1) return;
+    game.clearHalf();
+
+}
 
 // chọn đáp án
 function answer1() {
     //if (game.makeSure()) {
-        if (game.getElement('boxA').innerHTML === game.getCorrect()) {
+        if (game.getElement('box1').innerHTML === game.getCorrect()) {
             right.play()
-            setTimeout(function () {
-                game.getElement('boxA').style.backgroundColor = 'yellow';
-            }, 500)
-            //
+            game.getElement('box1').style.backgroundColor = 'yellow';
             game.getElement('point').innerHTML = game.getPoint();
+            document.getElementById('left').style.display = 'block'
             WinTheGame();
-            //
-            setTimeout(function () {
-                game.switchQuestion();
-                game.getElement('boxA').style.backgroundColor = '#3498db';
-            }, 3000);
             game.changeColorStep();
-        } else if (game.getElement('boxA').innerHTML !== game.getCorrect()) {
+        } else {
             game.getWrongAnswer();
+
         }
-    }
+}
 
 //}
 function answer2() {
     //if (game.makeSure()) {
-        if (game.getElement('boxB').innerHTML === game.getCorrect()) {
+        if (game.getElement('box2').innerHTML === game.getCorrect()) {
             right.play();
-            setTimeout(function () {
-                game.getElement('boxB').style.backgroundColor = 'yellow';
-            }, 500)
-            //
+            game.getElement('box2').style.backgroundColor = 'yellow';
             game.getElement('point').innerHTML = game.getPoint();
+            document.getElementById('left').style.display = 'block'
             WinTheGame();
-            //
-            setTimeout(function () {
-                game.switchQuestion();
-                game.getElement('boxB').style.backgroundColor = '#3498db';
-            }, 3000);
             game.changeColorStep();
-        } else if (game.getElement('boxB').innerHTML !== game.getCorrect()) {
+        } else {
             game.getWrongAnswer();
+
         }
     }
 //}
 function answer3() {
    // if (game.makeSure()) {
-        if (game.getElement('boxC').innerHTML === game.getCorrect()) {
+        if (game.getElement('box3').innerHTML === game.getCorrect()) {
             right.play();
-            setTimeout(function () {
-                game.getElement('boxC').style.backgroundColor = 'yellow';
-            }, 500)
-            //
+            game.getElement('box3').style.backgroundColor = 'yellow';
             document.getElementById('point').innerHTML = game.getPoint();
+            document.getElementById('left').style.display = 'block'
             WinTheGame();
-            //
-            setTimeout(function () {
-                game.switchQuestion();
-                game.getElement('boxC').style.backgroundColor = '#3498db';
-            }, 3000)
             game.changeColorStep();
-        } else if (game.getElement('boxC').innerHTML !== game.getCorrect()) {
+        } else {
             game.getWrongAnswer();
         }
     }
@@ -84,21 +80,14 @@ function answer3() {
 
 function answer4() {
    // if (game.makeSure()) {
-        if (game.getElement('boxD').innerHTML === game.getCorrect()) {
+        if (game.getElement('box4').innerHTML === game.getCorrect()) {
             right.play();
-            setTimeout(function () {
-                game.getElement('boxD').style.backgroundColor = 'yellow';
-            }, 500)
-            //
+            game.getElement('box4').style.backgroundColor = 'yellow';
             document.getElementById('point').innerHTML = game.getPoint();
+            document.getElementById('left').style.display = 'block'
             WinTheGame();
-            //
-            setTimeout(function () {
-                game.switchQuestion();
-                game.getElement('boxD').style.backgroundColor = '#3498db';
-            }, 3000);
             game.changeColorStep();
-        } else if (game.getElement('boxD').innerHTML !== game.getCorrect()) {
+        } else {
             game.getWrongAnswer();
         }
     }

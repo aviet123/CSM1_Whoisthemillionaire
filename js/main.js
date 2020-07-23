@@ -2,6 +2,7 @@ let Game = function () {
     this.level = 0;
     this.currentPoint = 0;
     this.isOver = false;
+    this.count = 0;
 
     this.getQuestion = function () {
         this.question = questions[this.level].question;
@@ -31,10 +32,10 @@ let Game = function () {
     // }
     this.showQuestion = function () {
          this.getElement('question').innerHTML = this.getQuestion();
-         this.getElement('boxA').innerHTML =  this.getAnswer(0);
-         this.getElement('boxB').innerHTML =  this.getAnswer(1);
-         this.getElement('boxC').innerHTML =  this.getAnswer(2);
-         this.getElement('boxD').innerHTML =  this.getAnswer(3);
+         this.getElement('box1').innerHTML =  this.getAnswer(0);
+         this.getElement('box2').innerHTML =  this.getAnswer(1);
+         this.getElement('box3').innerHTML =  this.getAnswer(2);
+         this.getElement('box4').innerHTML =  this.getAnswer(3);
         for (let i = 0; i < 13; i++) {
             this.getElement('step'+i).innerHTML = questions[i].point +'$'
         }
@@ -76,7 +77,7 @@ let Game = function () {
 
     }
     this.changeColorStep = function () {
-        for (let i = 0; i <13 ; i++) {
+        for (let i = 0; i < 13 ; i++) {
             if (this.currentPoint === questions[i].point){
                 document.getElementById('step'+i).style.backgroundColor = 'orange';
                 document.getElementById('step'+(i-1)).style.backgroundColor = '#3498db';
@@ -84,6 +85,15 @@ let Game = function () {
             
         }
 
+    }
+    this.clearHalf = function () {
+        this.count++;
+        for (let i = 1; i < 4 ; i++) {
+            if (game.getElement('box'+i).innerHTML !== game.getCorrect()){
+                game.getElement('box'+i).innerHTML = '';
+
+            }
+        }
     }
 }
 // Set màu background cho alert
@@ -93,10 +103,10 @@ a.style.color = 'white';
 a.style.textAlign = 'center';
 
 //Set hidden cho btn
-document.getElementById('make-sure').style.display = 'none';
 document.getElementById('play-again').style.display = 'none';
+document.getElementById('left').style.display = 'none';
 
-//Nhắc đáp án đúng
+//Set biến
 
 
 
